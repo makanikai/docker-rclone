@@ -12,6 +12,7 @@ crontab -u abc /defaults/rclone_cron
 
 # create empty config file
 touch /config/.rclone.conf
+mkdir -p /config/logs
 
 # permissions
 chown -R abc:abc \
@@ -20,6 +21,5 @@ chown abc:abc \
 	/config/.rclone.conf
 chmod +x \
 	/app/rclone.sh \
-	/config/Rclone.sh
 chmod 777 \
 	/var/lock
